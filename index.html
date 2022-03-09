@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- https://www.bootstrapcdn.com/ -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>String manipulation</title>
+</head>
+
+<body>
+    <h1>String manipulation</h1>
+    <div id="app">
+        <input id="inputField" v-model="Word" placeholder="Word">
+        <button id="button" v-on:click="Submit()" class="btn btn-primary">Submit</button>
+        <div>{{Message}}</div>
+        
+        <ol style="padding-top: 1em;">
+            <li v-for="w in Words">
+                {{w}}
+            </li>
+        </ol>
+
+        <div style="padding-top: 1em;">
+            <table class="table-striped table-bordered">
+            <tr v-for="w in Words">
+                <td style="width: 25%;">
+                    {{w}}
+                </td>
+            <tr>
+        </table>
+        </div>
+
+    </div>
+    <script src="./js/index.js"></script>
+</body>
